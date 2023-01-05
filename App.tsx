@@ -1,20 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import { styled } from 'nativewind';
 
+//className="flex-1 items-center justify-center bg-white"
+const StyledView = styled(View)
+const StyledText = styled(Text)
 export default function App() {
+
+    // Youtube Data API v3 Key
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <StyledView className="flex-1 items-center justify-center bg-blue ">
+          <StyledText>Open up App.tsx to start working on your app!</StyledText>
+          <StatusBar style="auto" />
+      </StyledView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
